@@ -36,6 +36,8 @@ dotenv_config = {
 }
 
 stageSetted = os.getenv("STAGE", 'local')
+SECRET_KEY = os.getenv("SECRET_KEY")
+
 print('Environment setted: ' + stageSetted)
 dot_env_path = os.path.join(BASE_DIR, stage_config[stageSetted])
 
@@ -47,7 +49,7 @@ load_dotenv(dotenv_path=dot_env_path, override=OVERRIDE_SO_ENV)
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-t7=3co%wrpll45xl0r!v*#e4m$v%!_mgk5i1k0x+ek04d88_*&'
+SECRET_KEY = SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
